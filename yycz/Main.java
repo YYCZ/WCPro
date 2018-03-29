@@ -7,8 +7,6 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
-		long startTime=System.currentTimeMillis();
-		
 		Input in=new Input(args);
 		
 		if(in.inValid())
@@ -20,17 +18,9 @@ public class Main {
 		
 		ArrayList<Word> words=core.countWords();
 		
-		System.out.println(words.size());
+		Output out=new Output(words);
 		
-/*		for(int i=0;i<words.size();i++)
-			System.out.println(words.get(i).getStr()+" : "+words.get(i).getFrequency());
-*/		
-		long endTime=System.currentTimeMillis();
-		System.out.println("程序运行时间： " + (endTime-startTime) + "ms");
-		
-		//Output out=new Output(words);
-		
-		//out.write();
+		out.write();
 	}
 
 }
