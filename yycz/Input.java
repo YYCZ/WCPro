@@ -13,22 +13,32 @@ public class Input {//文件输入模块
 
 		if (args.length==0){
 			System.out.println("参数为空（请输入一个txt格式文件作为参数）");			
-			return false;
+			return true;
 		}
 		
 		if (args.length==1){
 			
-			String fileType = args[0].substring(args[0].lastIndexOf(".") + 1, args[0].length()).toLowerCase();
-			String fType="txt";
+			File f = new File(args[0]);
 			
-			if (fType.matches(fileType)){							
-				return true;				
-			}			
-			System.out.println("参数类型不匹配（仅处理txt格式文件）");
-			return false;		
-		}
+				if(f.exists()){
+					
+					String fileType = args[0].substring(args[0].lastIndexOf(".") + 1, args[0].length()).toLowerCase();
+					String fType="txt";
+					
+					if (fType.matches(fileType)){							
+						return false;				
+					}		
+					
+					System.out.println("参数类型不匹配（仅处理txt格式文件）");
+					return true;															
+				}
+				
+				System.out.println("文件不存在！");
+				return true;
+					
+		}				
 			System.out.println("参数个数不符合（限定为一个）");
-			return false;							
+			return true;							
 	}
 	
 	public String getContent() throws IOException {
