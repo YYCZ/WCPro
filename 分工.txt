@@ -1,0 +1,4 @@
+ZHT--架构
+YHY--核心处理(Core类)
+CPX--输入控制(Input类)
+YXT--输出控制(Output类)
