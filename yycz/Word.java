@@ -1,6 +1,6 @@
 package yycz;
 
-public class Word {
+public class Word implements Comparable<Word>{
 	
 	private String str;
 	private int frequency;
@@ -26,4 +26,10 @@ public class Word {
 		this.frequency = frequency;
 	}
 	
+	@Override
+	public int compareTo(Word word) {
+		if(this.frequency==word.frequency)
+			return this.getStr().compareToIgnoreCase(word.getStr());
+		return word.frequency-this.frequency;
+	}
 }
