@@ -38,14 +38,16 @@ public class Core {
 	}
 	
 	private void hashmapToWordList(HashMap<String,Integer> map,ArrayList<Word> words) {
-		if(map.isEmpty()) {
-			words=null;
+		if(map.isEmpty())
 			return;
-		}
 		for(Entry<String, Integer> entry : map.entrySet()) {
 			Word word=new Word(entry.getKey(),entry.getValue());
 			words.add(word);
 		}
+	}
+	
+	private boolean isLetter(char ch) {
+		return ch>='a'&&ch<='z'||ch>='A'&&ch<='Z';
 	}
 	
 	public ArrayList<Word> countWords(){
@@ -54,11 +56,13 @@ public class Core {
 		char ch;
 		String str;
 		boolean inWord=false;
+		boolean concat;
 		StringBuilder sb=new StringBuilder();
 		content+=";";
 		for(int i=0;i<content.length();i++) {
 			ch=content.charAt(i);
-			if(Character.isLetter(ch)||ch=='-'&&Character.isLetter(content.charAt(i+1))) {
+			concat=ch=='-'&&i>0&&isLetter(content.charAt(i-1))&&isLetter(content.charAt(i+1));
+			if(isLetter(ch)||concat) {
 				sb.append(ch);
 				inWord=true;
 			}
@@ -74,5 +78,13 @@ public class Core {
 		hashmapToWordList(map, words);
 		Collections.sort(words);
 		return words;
+	}
+	
+	public String getTestResult() {
+		ArrayList<Word> words=this.countWords();
+		String str="";
+		for(Word word: words)
+			str+=word.getStr()+':'+word.getFrequency()+'/';
+		return str;
 	}
 }
