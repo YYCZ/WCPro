@@ -1,4 +1,4 @@
-package yycz;
+package WCPro.yycz;
 import java.io.*;
 
 public class Input {//文件输入模块
