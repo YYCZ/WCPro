@@ -17,7 +17,9 @@ public class Output {
 	public void write() throws IOException {
 		String str="";
 		int flag =1;
-		for(Word word: words){
+		Word word;
+		for(int i=0;i<100&&i<words.size();i++){
+			word=words.get(i);
 			if(flag==1){
 				str+=word.getStr()+' '+word.getFrequency();
 				flag =0;
