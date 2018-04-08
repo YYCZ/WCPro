@@ -57,14 +57,14 @@ public class OutputTest {
 	public static Collection<String []> getParameters(){
 		return Arrays.asList(
 			new String[][] {
-				{"hola:3 hello:1","1.txt"};
-				{"seas:22 would:19 rise:15 when:13 I:10 gave:7 the:5 word:1","2.txt"};
-				{"alone:200 arrow:199 apple:198 at:197 alive:196 all:195 angry:194 any:193 abuse:192 ability:191 ache:190 acheive:189 acomplishment:188 avoide:187 annouce:186 ah:185 ambulance:184 asia:183 asian:182 Africa:181"
-				+"Australia:180 Australian:179 attach:178 attachment:177 able:176 about:175 above:174 abroad:173 aceident:172 across:171 active:170 activity:169 ad:168 address:167 advertisement:166 afford:165 afraid:164 after:163 aai:162 ahe:161"
-				+"ago:160 agree:159 aha:158 air:157 alike:156 all:155 allow:154 almost:153 alone:152 alreaddd:151 also:150 am:149 always:148 amaze:147 baby:146 back:145 backward:144 bacteria:143 bad:142 badly:141"
-				+"bag:140 bah:139 bake:138 ball:137 balance:136 balloon:135 bang:134 band:133 banana:132 bank:131 bare:129 banner:128 bargain:127 bark:126 barn:125 barrel:124 base:123 basic:122 basically:121"
-				+"basin:120 basis:119 basket:118 bat:117 bath:116 bathe:115 bathroom:114 bay:113 battle:112 beach:111 beam:110 bean:109 bear:108 beard:107 beast:106 beat:105 beauty:104 because:103 bed:102 bee:101 beef:100 beer:99 before:98 beg:97 behalf:96 behave:95 being:94 bell:93","much.txt"
-			})
+				{"hola:3 hello:1","1.txt"},
+				{"seas:22 would:19 rise:15 when:13 I:10 gave:7 the:5 word:1","2.txt"},
+				{"alone:200 arrow:199 apple:198 at:197 alive:196 all:195 angry:194 any:193 abuse:192 ability:191 ache:190 acheive:189 acomplishment:188 avoide:187 annouce:186 ah:185 ambulance:184 asia:183 asian:182 Africa:181 "
+				+"Australia:180 Australian:179 attach:178 attachment:177 able:176 about:175 above:174 abroad:173 aceident:172 across:171 active:170 activity:169 ad:168 address:167 advertisement:166 afford:165 afraid:164 after:163 aai:162 ahe:161 "
+				+"ago:160 agree:159 aha:158 air:157 alike:156 all:155 allow:154 almost:153 alone:152 alreaddd:151 also:150 am:149 always:148 amaze:147 baby:146 back:145 backward:144 bacteria:143 bad:142 badly:141 "
+				+"bag:140 bah:139 bake:138 ball:137 balance:136 balloon:135 bang:134 band:133 banana:132 bank:131 bare:129 banner:128 bargain:127 bark:126 barn:125 barrel:124 base:123 basic:122 basically:121 "
+				+"basin:120 basis:119 basket:118 bat:117 bath:116 bathe:115 bathroom:114 bay:113 battle:112 beach:111 beam:110 bean:109 bear:108 beard:107 beast:106 beat:105 beauty:104 because:103 bed:102 bee:101 beef:100 beer:99 before:98 beg:97 behalf:96 behave:95 being:94 bell:93","much.txt"}
+			});
 	}
 	
 	@Before
