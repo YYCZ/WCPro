@@ -42,7 +42,7 @@ public class Core {
 		boolean concat;
 		StringBuilder sb=new StringBuilder();
 		content+=";";
-		for(int i=0;i<content.length();i++) {
+		for(int i=0; i<content.length(); i++) {
 			ch=content.charAt(i);
 			concat=ch=='-'&&i>0&&isLetter(content.charAt(i-1))&&isLetter(content.charAt(i+1));
 			if(isLetter(ch)||concat) {
