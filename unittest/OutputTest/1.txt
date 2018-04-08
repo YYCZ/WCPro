@@ -1,2 +1,2 @@
-hola:3 
-hello:1
+hola 3
+hello 1

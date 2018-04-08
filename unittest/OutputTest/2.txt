@@ -1,8 +1,8 @@
-seas:22 
-would:19 
-rise:15 
-when:13 
-I:10 
-gave:7 
-the:5 
-word:1
+seas 22
+would 19
+rise 15
+when 13
+I 10
+gave 7
+the 5
+word 1
