@@ -13,23 +13,6 @@ public class Core {
 		this.content=content;
 	}
 	
-	/*以朴素的办法统计词频,O(n^2)*/
-	private void updateWords(ArrayList<Word> words,String str) {
-		boolean newWord=true;
-		for(Word word : words) {
-			if(word.getStr().equals(str)) {
-				word.setFrequency(word.getFrequency()+1);
-				newWord=false;
-				break;
-			}
-		}
-		if(newWord) {
-			Word word=new Word(str,1);
-			words.add(word);
-		}
-	}
-	
-	/*以哈希的办法统计词频,O(n)*/
 	private void updateWordsWithHash(HashMap<String,Integer> map,String str) {
 		if(map.containsKey(str))
 			map.replace(str,map.get(str)+1);
@@ -69,7 +52,6 @@ public class Core {
 			else if(inWord) {
 				str=sb.toString();
 				str=str.toLowerCase();
-				//updateWords(words,str);
 				updateWordsWithHash(map, str);
 				inWord=false;
 				sb=new StringBuilder();
@@ -80,11 +62,12 @@ public class Core {
 		return words;
 	}
 	
+	//这个是提供给单元测试使用的接口
 	public String getTestResult() {
 		ArrayList<Word> words=this.countWords();
 		String str="";
 		for(Word word: words)
-			str+=word.getStr()+':'+word.getFrequency()+'/';
+			str+=word.getStr()+':'+word.getFrequency()+';';
 		return str;
 	}
 }
